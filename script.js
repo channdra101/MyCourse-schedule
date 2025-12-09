@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', loadCourses);
 
 // Fungsi Utama: Create atau Update
 function saveCourse() {
-    const name = document.getElementById('courseName').value;
-    const date = document.getElementById('courseDate').value;
-    const start = document.getElementById('courseStart').value;
-    const end = document.getElementById('courseEnd').value;
-    const editIndex = document.getElementById('editIndex').value;
+    const name = document.getElementById('course_name').value;
+    const date = document.getElementById('course_date').value;
+    const start = document.getElementById('course_start').value;
+    const end = document.getElementById('course_end').value;
+    const editIndex = document.getElementById('edit_index').value;
 
     // Validasi Sederhana
     if (!name || !date || !start || !end) {
@@ -32,7 +32,7 @@ function saveCourse() {
     } else {
         // Mode UPDATE: Timpa data lama berdasarkan index
         courses[editIndex] = courseData;
-        document.getElementById('editIndex').value = ""; // Reset index
+        document.getElementById('edit_index').value = ""; // Reset index
     }
 
     // Simpan ke Local Storage
@@ -45,7 +45,7 @@ function saveCourse() {
 // Fungsi READ: Tampilkan data
 function loadCourses() {
     const courses = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-    const list = document.getElementById('courseList');
+    const list = document.getElementById('course_list');
     list.innerHTML = '';
 
     courses.forEach((course, index) => {
@@ -80,25 +80,25 @@ function editCourse(index) {
     const course = courses[index];
 
     // Isi form dengan data yang mau diedit
-    document.getElementById('courseName').value = course.name;
-    document.getElementById('courseDate').value = course.date;
-    document.getElementById('courseStart').value = course.start;
-    document.getElementById('courseEnd').value = course.end;
-    document.getElementById('editIndex').value = index;
+    document.getElementById('course_name').value = course.name;
+    document.getElementById('course_date').value = course.date;
+    document.getElementById('course_start').value = course.start;
+    document.getElementById('course_end').value = course.end;
+    document.getElementById('edit_index').value = index;
 
     // Ubah tampilan tombol
-    document.getElementById('saveBtn').innerText = "Update Jadwal";
-    document.getElementById('cancelBtn').style.display = "inline-block";
+    document.getElementById('save_btn').innerText = "Update Jadwal";
+    document.getElementById('cancel_btn').style.display = "inline-block";
 }
 
 // Fungsi Reset Form
 function resetForm() {
-    document.getElementById('courseName').value = '';
-    document.getElementById('courseDate').value = '';
-    document.getElementById('courseStart').value = '';
-    document.getElementById('courseEnd').value = '';
-    document.getElementById('editIndex').value = '';
+    document.getElementById('course_name').value = '';
+    document.getElementById('course_date').value = '';
+    document.getElementById('course_start').value = '';
+    document.getElementById('course_end').value = '';
+    document.getElementById('edit_index').value = '';
 
-    document.getElementById('saveBtn').innerText = "Simpan Jadwal";
-    document.getElementById('cancelBtn').style.display = "none";
+    document.getElementById('save_btn').innerText = "Simpan Jadwal";
+    document.getElementById('cancel_btn').style.display = "none";
 }
