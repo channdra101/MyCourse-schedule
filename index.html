@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCourse Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Course Schedule</h1>
+
+        <div class="card form-card">
+            <input type="hidden" id="editIndex">
+            <div class="form-group">
+                <label>Mata Kuliah / Tugas</label>
+                <input type="text" id="courseName" placeholder="Contoh: Pemrograman Web">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Tanggal</label>
+                    <input type="date" id="courseDate">
+                </div>
+                <div class="form-group">
+                    <label>Mulai</label>
+                    <input type="time" id="courseStart">
+                </div>
+                <div class="form-group">
+                    <label>Selesai</label>
+                    <input type="time" id="courseEnd">
+                </div>
+            </div>
+
+            <button onclick="saveCourse()" id="saveBtn">Simpan Jadwal</button>
+            <button onclick="resetForm()" id="cancelBtn" style="display:none; background-color: #6c757d;">Batal</button>
+        </div>
+
+        <div class="list-container">
+            <h3>Daftar Jadwal</h3>
+            <ul id="courseList">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
