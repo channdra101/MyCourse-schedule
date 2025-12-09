@@ -10,9 +10,9 @@
 ## ✨ Fitur Unggulan
 
 ### 1. 📝 Comprehensive CRUD
-* **Create**: Menambahkan jadwal dengan detail Nama Mata Kuliah, Tanggal, Jam Mulai, dan Jam Selesai.
+* **Create**: Menambahkan jadwal Mata Kuliah, Tanggal, Jam Mulai, dan Jam Selesai.
 * **Read**: Menampilkan daftar jadwal dalam format kartu yang rapi dan mudah dibaca.
-* **Update**: Fitur edit interaktif. Saat tombol "Edit" ditekan, data akan kembali ke formulir untuk diperbarui (*Form Binding*).
+* **Update**: Saat tombol "Edit" ditekan, data akan kembali ke formulir untuk diperbarui (*Form Binding*).
 * **Delete**: Menghapus jadwal yang sudah tidak diperlukan dengan konfirmasi keamanan.
 
 ### 2. 💾 Local Storage Persistence
@@ -22,7 +22,7 @@ Data disimpan dalam format **JSON Object** di dalam memori browser pengguna.
 
 ## 🛠️ Teknologi yang Digunakan
 
-Project ini dibangun dengan pendekatan *No-Backend* untuk kemudahan deployment dan kecepatan akses:
+Project ini tidak dibangun dengan *Backend*untuk kemudahan deployment dan kecepatan akses:
 
 * **HTML5** - Semantik struktur web & Input type (Date/Time).
 * **CSS3** - Styling custom (tanpa framework CSS berat).
