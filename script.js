@@ -53,7 +53,7 @@ function loadCourses() {
         li.innerHTML = `
             <div class="info">
                 <span class="course-title">${course.name}</span>
-                <span class="course-time">📅 ${course.date} | ⏰ ${course.start} - ${course.end}</span>
+                <span class="course-time">🗓️ ${course.date} | ⏰ ${course.start} - ${course.end}</span>
             </div>
             <div class="btn-group">
                 <button class="btn-edit" onclick="editCourse(${index})">Edit</button>
